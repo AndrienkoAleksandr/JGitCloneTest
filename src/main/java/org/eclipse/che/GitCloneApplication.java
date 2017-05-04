@@ -66,6 +66,10 @@ import static jdk.nashorn.internal.objects.Global.exit;
 
 public class GitCloneApplication {
 
+    /* Correct behaviour: after clone default branch "New". See more https://github.com/AndrienkoAleksandr/JGitTest2/branches. */
+    //private static final String GIT_URL = "https://github.com/AndrienkoAleksandr/JGitTest2.git";
+
+    /* Incorrect behaviour, because default branch after clone should be "develop". See more: https://github.com/idexmai/testRepo-2/branches. */
     private static final String GIT_URL = "https://github.com/idexmai/testRepo-2";
 
     private void init() throws MalformedURLException {
